@@ -10,6 +10,11 @@ repositories {
 }
 
 dependencies {
+    // PostgreSQL JDBC driver
+    implementation("org.postgresql:postgresql:42.7.3")
+
+    // MongoDB Kotlin/sync driver
+    implementation("org.mongodb:mongodb-driver-sync:5.1.0")
     testImplementation(kotlin("test"))
 }
 
