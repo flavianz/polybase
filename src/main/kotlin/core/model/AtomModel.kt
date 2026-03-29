@@ -1,5 +1,5 @@
 package ch.flavianz.core.model
 
-class Atom {
+class AtomModel {
 
 }
