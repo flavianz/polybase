@@ -16,6 +16,9 @@ dependencies {
     // MongoDB Kotlin/sync driver
     implementation("org.mongodb:mongodb-driver-sync:5.1.0")
     testImplementation(kotlin("test"))
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
+    testImplementation("io.mockk:mockk:1.13.17")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 kotlin {
@@ -24,4 +27,5 @@ kotlin {
 
 tasks.test {
     useJUnitPlatform()
+    jvmArgs("-XX:+EnableDynamicAgentLoading", "-Dnet.bytebuddy.experimental=true")
 }

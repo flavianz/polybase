@@ -1,8 +1,12 @@
 package ch.flavianz
 
+import ch.flavianz.adapters.mongo.MongoDatabase
+import ch.flavianz.adapters.postgres.PostgresDatabase
 import ch.flavianz.core.connection.ConnectionManager
 import ch.flavianz.core.connection.MongoConnection
 import ch.flavianz.core.connection.PostgresConnection
+import ch.flavianz.core.model.CollectionModel
+import ch.flavianz.core.model.DataType
 
 fun main() {
     val manager = ConnectionManager()

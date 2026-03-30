@@ -1,8 +1,7 @@
 package ch.flavianz.core.model
 
-class CollectionModel(val name: String) {
-    val properties = emptyMap<String, DataType>()
-    val particles = emptyList<ParticleModel>()
-    val atoms = emptyList<AtomModel>()
-    val connections = emptyList<CollectionModel>()
-}
+data class CollectionModel(val name: String,
+                      val properties: Map<String, DataType> = emptyMap(),
+                      val particles: List<ParticleModel> = emptyList(),
+                      val atoms: List<AtomModel> = emptyList(),
+                      val connections: List<CollectionModel> = emptyList())
